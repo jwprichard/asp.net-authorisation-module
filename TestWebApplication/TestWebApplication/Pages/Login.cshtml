@@ -1,0 +1,28 @@
+﻿@page
+@model TestWebApplication.Pages.LoginModel
+@{
+    ViewData["Login"] = "Login page";
+}
+<!--Create a login page with an input username and password field, and a button for submitting the username and password-->
+<div class="text-center">
+    <h1 class="display-4">Login</h1>
+    <p>Enter your username and password</p>
+</div>
+<div class="text-center">
+    <form method="post">
+    <div class="form-group">
+        <label asp-for="Input.Username"></label>
+        <input asp-for="Input.Username" class="form-control" />
+        <span asp-validation-for="Input.Username" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Input.Password"></label>
+        <input asp-for="Input.Password" class="form-control" />
+        <span asp-validation-for="Input.Password" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Login</button>
+    </div>
+    </form>
+</div>
+        
